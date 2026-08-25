@@ -1938,7 +1938,7 @@ client.once('clientReady', () => {
   //client.voiceLogger = voiceLogger;
 
   // Register interaction handlers (buttons/modals)
-  try { require('./event/interactionCreate')(client, { tempDb: db }); } catch (e) { console.error('Failed to register interactionCreate handler:', e); }
+// try { require('./event/interactionCreate')(client, { tempDb: db }); } catch (e) { console.error('Failed to register interactionCreate handler:', e); }
 
   // Import your temp voice system here (make sure it emits buttons)
   require('./tempVoiceSystem')(client, db);
