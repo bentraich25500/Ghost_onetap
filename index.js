@@ -305,8 +305,9 @@ try {
 } catch {}
 
 // Initialize logger
-const VoiceLogger = require('./utils/logger');
-let voiceLogger;
+// Initialize logger
+// const VoiceLogger = require('./utils/logger');
+// let voiceLogger;
 
 // Handle Setup interactions (selects/buttons/modals) here
 client.on('interactionCreate', async (interaction) => {
