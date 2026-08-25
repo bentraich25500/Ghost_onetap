@@ -30,7 +30,7 @@ const fs = require('fs');
 // Firebase Admin (for writing realtime stats to dashboards)
 let admin;
 try { admin = require('firebase-admin'); } catch {}
-const logger = console;
+const GuildConfigService = require('./utils/config');
 let devConfig = { developers: [] };
 try {
   devConfig = require('./config.json');
@@ -100,9 +100,9 @@ function getStaticHelpCategories() {
       label: 'Setup',
       description: 'Commands for server administrators to configure the bot.',
       commands: [
-        { name: '.v setup', value: 'Setup One Tap.' },
-        { name: '.v prefix', value: 'Change the bot command prefix.' },
-        { name: '.v toggle', value: 'Enable or disable the bot in this server.' },
+        { name: '$ setup', value: 'Setup One Tap.' },
+        { name: '$ prefix', value: 'Change the bot command prefix.' },
+        { name: '$ toggle', value: 'Enable or disable the bot in this server.' },
       ],
     },
     manager: {
@@ -305,9 +305,8 @@ try {
 } catch {}
 
 // Initialize logger
-// Initialize logger
-// const VoiceLogger = require('./utils/logger');
-// let voiceLogger;
+const VoiceLogger = require('./utils/logger');
+let voiceLogger;
 
 // Handle Setup interactions (selects/buttons/modals) here
 client.on('interactionCreate', async (interaction) => {
