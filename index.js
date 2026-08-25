@@ -1931,11 +1931,11 @@ client.once('clientReady', () => {
   console.log('Bot is online and ready!');
   client.db = db;
   // Initialize config service
-  client.config = new GuildConfigService(db);
+  //client.config = new GuildConfigService(db);
 
   // Initialize voice logger
-  voiceLogger = new VoiceLogger(client, db);
-  client.voiceLogger = voiceLogger;
+  //voiceLogger = new VoiceLogger(client, db);
+  //client.voiceLogger = voiceLogger;
 
   // Register interaction handlers (buttons/modals)
   try { require('./event/interactionCreate')(client, { tempDb: db }); } catch (e) { console.error('Failed to register interactionCreate handler:', e); }
