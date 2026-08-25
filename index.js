@@ -30,7 +30,7 @@ const fs = require('fs');
 // Firebase Admin (for writing realtime stats to dashboards)
 let admin;
 try { admin = require('firebase-admin'); } catch {}
-const GuildConfigService = require('./utils/config');
+const GuildConfigService = require('./config.json');
 let devConfig = { developers: [] };
 try {
   devConfig = require('./config.json');
