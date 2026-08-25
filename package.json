@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "@discordjs/voice": "^0.18.0",
+    "discord-vc-status": "^1.0.4",
+    "discord.js": "^14.22.1",
+    "firebase-admin": "^12.6.0",
+    "dotenv": "^16.5.0",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "sqlite3": "^5.1.7",
+    "vibesync": "^1.0.6"
+  }
+}
