@@ -30,7 +30,7 @@ const fs = require('fs');
 // Firebase Admin (for writing realtime stats to dashboards)
 let admin;
 try { admin = require('firebase-admin'); } catch {}
-const GuildConfigService = require('./utils/config');
+const logger = console;
 let devConfig = { developers: [] };
 try {
   devConfig = require('./config.json');
@@ -305,8 +305,8 @@ try {
 } catch {}
 
 // Initialize logger
-const VoiceLogger = require('./utils/logger');
-let voiceLogger;
+// const VoiceLogger = require('./utils/logger');
+// let voiceLogger;
 
 // Handle Setup interactions (selects/buttons/modals) here
 client.on('interactionCreate', async (interaction) => {
